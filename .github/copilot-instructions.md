@@ -1,52 +1,48 @@
-# Copilot Instructions for AI Coding Agents
+## Copilot Instructions for AI Coding Agents
 
-## Project Overview
-This is a simple Java project for learning and experimentation. The codebase consists of:
-- `HelloWorld.java`: Basic entry point, prints a message to the console.
-- `Variaveis.java`: Demonstrates variable usage and basic Java syntax.
-- `lib/`: Contains external dependencies, currently only JUnit for testing.
+### Project Overview
+This is a simple Java project with two main source files:
+- `HelloWorld.java`: Basic hello world program.
+- `Variaveis.java`: Demonstrates variable declaration and printing in Java.
 
-## Architecture & Patterns
-- No complex architecture; each `.java` file is standalone and does not import from others.
-- No package structure; all classes are in the default package.
-- No configuration files (e.g., `pom.xml`, `build.gradle`).
+### Directory Structure
+- `lib/`: Contains external dependencies. Currently includes `junit-platform-console-standalone-1.13.0-M3.jar` for running JUnit tests.
+- `.github/`: Contains this instructions file.
 
-## Developer Workflows
-### Build & Run
-- Compile Java files using:
-  ```powershell
-  javac HelloWorld.java Variaveis.java
-  ```
-- Run a class using:
-  ```powershell
-  java HelloWorld
-  ```
+### Build & Run Workflow
+**Compile:**
+```powershell
+javac HelloWorld.java Variaveis.java
+```
+**Run:**
+```powershell
+java HelloWorld
+java Variaveis
+```
+**Test (JUnit):**
+No test files are present yet, but to run tests, use:
+```powershell
+java -jar lib/junit-platform-console-standalone-1.13.0-M3.jar --class-path . --scan-class-path
+```
 
-### Testing
-- JUnit is available via `lib/junit-platform-console-standalone-1.13.0-M3.jar`.
-- To run tests (if any are added):
-  ```powershell
-  java -jar lib/junit-platform-console-standalone-1.13.0-M3.jar --class-path . --scan-class-path
-  ```
-- No test files currently exist; add test classes in the root directory if needed.
+### Conventions & Patterns
+- All source files are in the project root (no `src/` folder).
+- Class names use PascalCase and match their filenames.
+- Main methods are used for entry points.
+- External libraries are placed in `lib/` and referenced directly in commands.
 
-## Conventions
-- Use clear, beginner-friendly Java syntax.
-- Place all source and test files in the project root.
-- Reference external libraries from the `lib/` directory.
+### Integration Points
+- JUnit is available for future test development. Place test classes in the root or organize as needed.
 
-## Integration Points
-- Only external dependency is JUnit (for future tests).
-- No network, database, or other integrations.
+### Example: Adding a New Class
+1. Create `NewClass.java` in the root.
+2. Compile with `javac NewClass.java`.
+3. Run with `java NewClass`.
 
-## Examples
-- See `HelloWorld.java` for main method and console output.
-- See `Variaveis.java` for variable declaration and usage.
-
-## Recommendations for AI Agents
-- When adding new features, keep code simple and in the root directory.
-- When introducing tests, use JUnit and place test files alongside source files.
-- Document any new conventions or workflows in this file.
+### Recommendations for AI Agents
+- Follow the existing pattern for class and file naming.
+- Update this file if new workflows, dependencies, or conventions are introduced.
+- Reference the `lib/` folder for any external dependencies.
 
 ---
-_Last updated: October 8, 2025_
+If any section is unclear or incomplete, please provide feedback for improvement.
