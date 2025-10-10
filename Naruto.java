@@ -22,7 +22,7 @@ public class Naruto extends DemonioBijuu {
 
     public static void main(String[] args) {
         Naruto ninja = new Naruto();
-        ninja.setHabilidades("Modo Sabio das Seis Caminhos");
+        ninja.setHabilidades("Modo Sábio das Seis Caminhos");
         ninja.mostrarPoder();
     }
 }
